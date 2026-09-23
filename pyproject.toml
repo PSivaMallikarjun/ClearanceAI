@@ -1,0 +1,24 @@
+[project]
+name = "clearanceai"
+version = "0.1.0"
+description = "clearanceai using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[file-processing,litellm,tools]>=1.15.22,<2.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/clearanceai"]
+
+[tool.crewai]
+type = "flow"
+definition = "src/clearanceai/flow.json"
+project_id = "1a8b0b4f-7e74-491c-9093-8e7e05ee03fc"
+
+[tool.uv]
+override-dependencies = ["litellm<=1.82.6"]
