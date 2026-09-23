@@ -1,4 +1,4 @@
-# ClearanceAI 🤖🔍
+
 # ClearanceAI 🤖🔍
 
 ### Autonomous Multi-Agent QA Engineering & Release-Clearance Platform
